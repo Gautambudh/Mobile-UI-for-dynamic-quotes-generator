@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik;
+}
+
+/* =========================================================================
+                            background wallpaper
+   ========================================================================= */
+body {
+    background-image: url("./images/wallpaperflare.com_wallpaper.jpg");
+    overflow-x: hidden; 
+}
+
+/* =========================================================================
+                    Container for mobile frame
+   ========================================================================= */
+
+.container {
+    position: absolute;
+    z-index: 55;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mobile {
+    width: 17rem;
+    height: 33rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 34px;
+    box-shadow: 7px 7px 10px rgb(255 255 255 / 20%);
+}
+
+/* =========================================================================
+                    User interface inside the mobile frame
+   ========================================================================= */
+.user-interface {
+    background-color: #091b52;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+    border-radius: 30px;
+}
+/* ************* mobile UI header ***************** */
+.mobile-header {
+    padding:0;
+    padding-top: 2.5rem;
+    background: linear-gradient(16deg, rgb(222 0 215),hsl(202deg 100% 50%));
+    border-radius: 30px 30px 10px 10px;
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 0.3rem;
+}
+/* *********** designing white notch ************** */
+.white-color-mic-space {
+    padding: 0;
+    height: 1.8rem;
+    width: 7.5rem;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top: 15.3px;
+    border-radius: 0 0 10px 10px;
+    transform: translate(-50%, -50%);
+    z-index: 22;
+}
+.three-dots{
+    padding: 0 1rem;
+    color: white;
+}
+.profile-pic-and-name > img {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.profile-pic-and-name p {
+    margin-bottom: 0;
+    font-size: 9px;
+}
+.name {
+    flex-direction: column;
+}
+.icon {
+    position: relative;
+    top: 10.8%;
+    color: #ffffff87;
+}
+button {
+    border-radius: 5px;
+    padding: 0.4rem 0;
+    background: linear-gradient(16deg, rgb(222 0 215),hsl(202deg 100% 50%));
+    color: rgb(19, 7, 41);
+    font-weight: bold;
+}
+button:hover {
+    background: linear-gradient(60deg, rgb(222 0 215),hsl(202deg 100% 50%));
+    color: rgba(255, 255, 255, 0.741);
+}
+
+/* -------------------------------------------------------------------------
+                        designing quote sec in UI
+   ------------------------------------------------------------------------- */
+.quote-sec {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    justify-content: center;
+    height: 50%;
+    background-color:#47597a47;
+    color: #ffffffe6;
+    border-radius: 15px 15px 15px 5px;
+    padding: 0.3rem 0.5rem;
+    margin-bottom: 0;
+    box-shadow: 7px 7px 10px rgb(5 25 44 / 20%);
+}
+/* -------------------------------------------------------------------------
+                    designing author sec in UI
+   ------------------------------------------------------------------------- */
+.author-sec {
+    position: relative;
+    font-size: 12px;
+    color: #ffffffe6;
+    bottom: 30px;
+}
+/* =========================================================================
+                    Media queries for mobile view
+   ========================================================================= */
+@media screen and (max-width:430px) {
+    
+    .mobile {
+        width: 15.7rem;
+        height: 30rem;
+    }
+    .white-color-mic-space {
+        left: 50% !important;
+    }
+    .container {
+        margin: 0.1rem 0;
+    }
+}
